@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        var Employee = {
+            "Name": "Sandip",
+            "Salary": 1000,
+            "Company": "Grasko"
+        }
+        Employee.Nationality = "Indian";
+        alert(Employee.Name);
+        alert(Employee.Nationality);
+
+        function Suppliers() {
+            this.SuppliersName = "Sandip";
+            this.SuppliersCode = "S1001";
+        }
+
+        var sup = new Suppliers();
+        sup.Natianality = "Indian";
+        alert(sup.SuppliersName + " " + sup.SuppliersCode + ", is a/an " + sup.Natianality);
+    </script>
+</body>
+</html>

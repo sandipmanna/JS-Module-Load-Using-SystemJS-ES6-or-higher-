@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        function Customer() {
+            this.CustomerName = "";
+            this.Add = function () {
+                alert("This is parent class Add method.");
+            }
+        }
+
+        function CustomerCude() {
+            this.Update = function () {
+                alert("This is child class Update method.");
+                alert("Name: " + this.CustomerName);
+            }
+
+            //this.Add = function () {
+            //    alert("This is child class Add method.");
+            //}
+        }
+
+        CustomerCude.prototype = new Customer();
+        var Cude = new CustomerCude();
+        var Parent = new Customer();
+        Cude.CustomerName = "Grasko";
+        Cude.Update();
+        Cude.Add()
+        Parent.Add();
+    </script>
+</body>
+</html>

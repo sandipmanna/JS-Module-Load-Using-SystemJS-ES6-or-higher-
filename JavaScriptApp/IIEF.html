@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        var SuppliersNameSpace = {};
+        var CustomerNameSpace = {};
+
+        CustomerNameSpace = (function () {
+            function Customer() {
+                var _CustomerName = "";
+                var _CustomerCode = "";
+                var _DBConnect = function () {
+                }
+                var _Validate = function () {
+                    _DBConnect();
+                    _CustomerName = this.CustomerName;
+                    _CustomerCode = this.CustomerCode;
+                    alert("This is validation for Customer, " + _CustomerName + "(" + _CustomerCode + ")");
+                }
+                return {
+                    CustomerName: _CustomerName,
+                    CustomerCode: _CustomerCode,
+                    Validate: _Validate
+                }
+            }
+            function CustomerReporting() {
+                var _CustomerName = "";
+                var _CustomerCode = "";
+                var _DBConnect = function () {
+                }
+                var _Validate = function () {
+                    _DBConnect();
+                    alert("This is validation");
+                }
+                return {
+                    CustomerName: _CustomerName,
+                    CustomerCode: _CustomerCode,
+                    Validate: _Validate
+                }
+            }
+            return {
+                Customer,
+                CustomerReporting
+            }
+        }());
+
+        SuppliersNameSpace = (function () {
+            function Suppliers() {
+                var _SuppliersName = "";
+                var _SuppliersCode = "";
+                var _DBConnect = function () {
+                }
+                var _Validate = function () {
+                    _DBConnect();
+                    alert("This is validation");
+                }
+                return {
+                    SuppliersName: _SuppliersName,
+                    SuppliersCode: _SuppliersCode,
+                    Validate: _Validate
+                }
+            }
+            return {
+                Suppliers
+            }
+        }());
+
+        //var Cust = new Customer;
+        //Cust.CustomerName = "Sandip";
+        //Cust.CustomerCode = "GRA1029";
+        //Cust.Validate();
+
+        var Customer = new CustomerNameSpace.Customer();
+        Customer.CustomerName = "Sandip Manna";
+        Customer.CustomerCode = "KAN1029";
+        Customer.Validate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <script>
+        
+        System.import('/BusinessLogic/Customer.js').then(function (exports) {
+            var Customer = exports.CustomerNameSpace.Customer();
+            Customer.CustomerName = "Sandip Manna";
+            Customer.CustomerCode = "GRA1001";
+            Customer.Validate();
+        })
+    </script>
+    <!--For ES6(2015) need to install jspm(Java Script Package Manager),
+        Need a traspiler to load a module(Bable)
+        1- npm install -g jspm
+        go to your project folder
+        2- jspm init (it will generatet the jspm consfig file)
+        need to install lodash for babel
+        3- jspm install lodash
+
+        take the System.js file from jspm_Package
+        --> 
+</body>
+</html>
+
+
